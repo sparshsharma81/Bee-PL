@@ -1,0 +1,45 @@
+console.log("hii");
+
+setTimeout(() => {
+    console.log("heavy work done");
+}, 0);
+
+console.log("hello");
+
+setTimeout(()=>{
+    console.log("async part2");
+},1000);
+
+
+OUTPUT:
+hii 
+hello
+heavy work done
+async part2
+
+the reason of this output is 
+the event loop and callback queue
+
+
+there is a Communication between main stack and Worker
+the event loop will check if the main stack is empty or not
+if empty it will push the callback queue to main stack
+
+Steps of this:
+1. main stack: console.log("hii") -> prints hii
+2. main stack: setTimeout(...) -> push to Web API
+3. main stack: console.log("hello") -> prints hello
+4. Web API: after 0ms -> push callback to callback queue
+5. event loop: main stack is empty -> push callback queue to main stack
+6. main stack: console.log("heavy work done") -> prints heavy work done
+
+the event loop prioritize the main stack to be empty before pushing the callback queue
+
+THE EVENT LOOP PRIORITY
+1.Promises
+2.setTimeout / setInterval  
+3. I/O
+4. UI rendering
+
+
+

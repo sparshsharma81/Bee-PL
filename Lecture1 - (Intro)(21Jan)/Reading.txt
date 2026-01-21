@@ -1,0 +1,5 @@
+Reading the asyn file we have methods
+
+1.callbacks -- a function which are part as a parameter to another function 
+2.promises -- a object which is used to handle asynchronous operation
+3.async/await -- syntactic sugar over promises

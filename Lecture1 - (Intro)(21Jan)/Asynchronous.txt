@@ -1,0 +1,9 @@
+setTimeout(() => {
+    console.log("heavy work done");
+}, 2000);
+
+function heavy(){
+    for(let i=0;i<1e9;i++){
+        //heavy work
+    }
+}

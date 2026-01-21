@@ -1,0 +1,59 @@
+Async Programming
+--Multiple things together
+
+..like nodejs single-threaded..print per line
+
+V8 engine
+--C++ engine
+--JS runtime
+--Event loop
+
+
+Asynchronous vs synchronous code 
+
+--Sync: blocking
+--Async: non-blocking   
+--Callbacks
+
+Asynchronous code example
+console.log("start");
+
+function heavy(){
+    for(let i=0;i<1e9;i++){
+        //heavy work
+    }
+    console.log("heavy work done");
+}
+
+heavy();
+console.log("end");
+
+
+the normal data is in main stack
+the heavy function is blocking the main thread
+Asynchronous code example with setTimeout
+
+the heavy thing is in the Worker thread 
+
+
+console.log("start");
+
+
+
+
+
+ASYNC Programming 
+ -- CALLBACK --- CALLBACK HELL 
+setTimeout(() => {
+    console.log("heavy work done");
+
+    --pROMIISES -- fulfilled/rejected 
+    ----CHaining 
+    (we write with .then()) and .catch() for error handling
+
+    //for multiple promises we have promise chaining 
+
+and now we use async/await 
+    async/await -- syntactic sugar over promises 
+    (we write with try/catch for error handling)
+    --try/catch 
