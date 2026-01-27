@@ -1,0 +1,8 @@
+Rest API
+rest api are the methods which we add in the backend to perform CRUD operations
+CRUD - Create, Read, Update, Delete
+like the methods in http protocol..they are rest api 
+
+after http -- axios 
+
+http is inbuild module
